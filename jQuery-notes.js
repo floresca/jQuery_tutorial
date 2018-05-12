@@ -1,4 +1,4 @@
-// Lesson 1 and 2
+// Lesson 1, 2 and 3
 
 jQuery is not a programming language, it is a library for Java Script
 jQuery allows for work between js and the DOM to be much easier, as well as working with events and animations
