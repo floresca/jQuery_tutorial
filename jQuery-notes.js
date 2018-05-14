@@ -55,3 +55,70 @@ $("div[class]").css({border:"2px solid pink"}); find all the divs in the page an
 $("img[alt]").css({border:"2px solid pink"}); will target all the img elements with alt attribute regardless of the value of the attribute
 
 $("img[alt-quote]").css({border:"2px solid purple"}); This gets all the images with alt attribute equal to quote
+
+
+// Lessons 7, 8, and 9
+
+//Part 7
+
+The DOM is a way to describe the relationship between elements on a page and gives us a way to target and work with them
+
+jQuery makes it easier to traverse the DOM tree
+
+The NEXT method grabs and element and give us the next one in line:
+$("#contact-methods").next().css({border:"3px solid red"}); Here we target the ID then tell it to look at the next element after this one and affect it
+
+The PREVIOUS method:
+$("#social-nav").prev().css({border:"3px solid red"}); this find the previous element above
+
+The PARENT method:
+$(".banner-title").parent().css({border:"3px solid pink"}); this finds the parent element of the banner title class element.  
+if you add an s (parents) then this will go up the tree and grab all parents (parent, granddad, greatGrandDad etc)
+
+The Children method:
+$("#social-nav").children().css({border:"3px solid red"}); will grab all the children of the current element
+
+The FIND method:
+$("#contact").find(".facebook").css({border:"3px solid red"}); looks for a class called facebook within the contact ID section
+
+The CLOSEST method:
+$("#social-nav").closest(".wrapper").css({border:"3px solid red"}); Gets the closest parent with a class of parent and skips and parent in the tree that does not match
+
+
+// Part 8
+
+CHAINING
+
+This chain starts with one method and changes css then launches into the next chained element but if it gets long it gets unreadable and hard to deal with
+$("#contact-methods").css({border: "2px solid red"}).next().css({border: "2px solid green"}).closest("section").css({border: "2px solid blue"});
+
+This chain is more readable
+$("#contact-methods").css({border: "2px solid red"})
+    .next().css({border: "2px solid green"})
+    .closest("section").css({border: "2px solid blue"});
+    
+    
+//Part 9
+
+ADDING CONTENT USING JQUERY
+
+We want to add this element
+var tweet = "<div style='margin: 20px 0; padding: 10px; background: #eee'>The big fight live: Ham vs Cheese!</div>";
+
+this code will append the variable tweet into the section with ID tweets and will add it at the bottom of the div box
+$("#tweets div").append(tweet);
+
+this code will add content before the p tag inside the div being called out
+$("#tweets div").prepend(tweet);
+
+this code will place the content exactly before the element being called out
+$("#tweets p").before(tweet);
+
+this code will place the content exactly after the element being singled out
+$("#tweets p").prepend(tweet);
+
+this code will change out the p html currently inside the div into the new html inside the variable tweet
+$("#tweets div").html(tweet);
+
+this will turn everything inside the tweet variable (even the html code) into text and print it inside the p tag replacing anything in it
+$("#tweets div p").text(tweet);
