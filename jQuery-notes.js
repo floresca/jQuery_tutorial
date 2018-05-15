@@ -1,4 +1,4 @@
-// Lesson 1, 2 and 3
+--------------------------------// Lesson 1, 2 and 3
 
 jQuery is not a programming language, it is a library for Java Script
 jQuery allows for work between js and the DOM to be much easier, as well as working with events and animations
@@ -6,7 +6,7 @@ jQuery allows for work between js and the DOM to be much easier, as well as work
 jQuery also helps a lot by chaining methods/effects etc to elements in one line using periods in between. jQuery also has tons of pluggings as well
 
 
-// Lessons 4, 5 and 6
+--------------------------------// Lessons 4, 5 and 6
 
 //Part 4
 To get an element from the document with jQuery you can start by adding a dollar sign $ and then looking for the specific ID/Class/tag you need
@@ -57,7 +57,7 @@ $("img[alt]").css({border:"2px solid pink"}); will target all the img elements w
 $("img[alt-quote]").css({border:"2px solid purple"}); This gets all the images with alt attribute equal to quote
 
 
-// Lessons 7, 8, and 9
+--------------------------------// Lessons 7, 8, and 9
 
 //Part 7
 
@@ -122,3 +122,66 @@ $("#tweets div").html(tweet);
 
 this will turn everything inside the tweet variable (even the html code) into text and print it inside the p tag replacing anything in it
 $("#tweets div p").text(tweet);
+
+
+--------------------------------// Lessons 10, 11, and 12
+
+//Part 10
+
+USING WRAP AND UNWRAP ELEMENTS  
+
+this wraps all called elements individually
+$("section").wrap("<div>"); This find the section element and wraps every single one into its on div tag
+
+$("section").unwrap(); will take off the the PARENT element of whatever tag you are calling out. No need to specify the parent
+
+$("section").wrapAll("<div>"); will wrap all the sections element together into one div tag instead of individually
+
+USING THE WRAP COMMANDS:
+
+var wrapper = "<div class='wrapper'>"; the html we want to use to wrap things when we call this variable
+var button = $(".button"); we can call the element with class button this way (remember using $ will return a jQuery array)
+var wrapped = true; 
+
+button[0].onclick = function(){   The first part removes the button out from the jQuery array then runs function onclick
+    if(wrapped){                    If the function is wrapped (which equals to true)
+        $("section").unwrap();      then target the element section and unwrap it, change wrapped to false, and change the text to "wrap"
+        wrapped = false;
+        button.text("wrap");
+    } else {                            however, if wrapped = false then wrap the whole thing in the wrapper called out above, change wrapped to true and the text to "Unwrap"
+        $("section").wrapAll(wrapper);  
+        wrapped = true;
+        button.text("Unwrap");
+    }
+};
+
+
+// Part 11
+
+REMOVING CONTENT FROM THE HTML USING JQUERY
+
+.empty() - empties the inner html of an element
+.remove() - remove the element completely
+
+This targets the element with class button and empties out the html inside it
+$(".button").empty(); 
+
+This removes the html with class button completely
+$(".button").remove();
+
+// Part 12
+
+CHANGING ATTRIBUTES
+
+.removeAttr() removes an attribute completely
+.attr() can read or set any attribute
+
+This will target the img inside the tag with contact ID and remove the alt attribute currently called "map"
+$("#contact img").removeAttr("alt");
+
+This targets the same img and needs TWO arguments, the attribute and the value (alt="location")
+$("#contact img").attr("alt", "location");
+
+If you do not pass a second argument you can call out the source attribute. The below, run on the console, will return the value of the "alt" attribute of the img called out
+console.log($("#contact img").attr("alt"));
+
