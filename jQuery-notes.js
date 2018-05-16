@@ -274,3 +274,21 @@ $("#lead-banner").click(function(){ / event helper wraps the lead-banner into a 
 });
 
 
+//Part 17
+
+DOCUMENT READY VS WINDOW LOAD
+
+if the scrip tag is at top of page you can load in this way:
+
+LOAD SCRIPT RIGHT AFTER THE DOM IS LOADED (/to be used if you only need the HTML loaded and dont care if the values are loaded or not/)
+$(document).on("ready", function(){ / all your page code goes here/ });
+OR
+$(document).ready(function(){ /all your page code goes here/ }); /this uses the event helper short hand
+OOORRRR
+$(function(){ /all your page code goes here/ }); / The dollah sign calls the document anyways
+
+
+LOAD SCRIPT RIGHT AFTER THE COMPLETE PAGE IS LOADED, VALUES AND ALL (/To be used if your scrip relies on working with the values inside yout tags/)
+$(window).on("load", function(){ /your page code goes here/ });
+OR
+$(window).load(function(){ /your page code goes here/ });

@@ -1,4 +1,1 @@
-$("#lead-banner").click(function(){
-    alert("you clicked me!");
-    $("#lead-banner").off("click");
-});
+$(window).on("load", function(){ /your page code goes here/ });
