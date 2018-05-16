@@ -249,3 +249,28 @@ myLis.on("click", function(){  / We bind myLis using .on() and give it arguments
     
     myLis.off("click"); / using the unbind method .off() we can unbind the unselected elements so the binding does not work on them any longer
 });
+
+
+--------------------------------// Lessons 16, 17, and 18
+
+//Part 16
+
+EVENT HELPERS
+
+Event helpers are short hand ways to write jQuery events. For example:
+
+$("#contact").on("click", function (){...}); 
+
+can be written as:
+
+$$("#contact").click(function (){...}); / jQuery will know that you are calling for onclick
+
+
+The event helper will wrap the function but you can still unwrap it just like before:
+
+$("#lead-banner").click(function(){ / event helper wraps the lead-banner into a click event
+    alert("you clicked me!");
+    $("#lead-banner").off("click"); / after the click is done and the function runs we unwrap it from the event
+});
+
+
