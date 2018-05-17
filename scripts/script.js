@@ -1,1 +1,1 @@
-$(window).on("load", function(){ /your page code goes here/ });
+$

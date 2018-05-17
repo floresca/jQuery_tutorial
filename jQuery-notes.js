@@ -292,3 +292,26 @@ LOAD SCRIPT RIGHT AFTER THE COMPLETE PAGE IS LOADED, VALUES AND ALL (/To be used
 $(window).on("load", function(){ /your page code goes here/ });
 OR
 $(window).load(function(){ /your page code goes here/ });
+
+
+//Part 18
+
+JQUERY EVENTS OBJECT
+
+The event object is used to access the TON of information that is gathered when an user interacts with the DOM
+
+The following playes with the event object:
+
+$("*").on("click", function(e){                                     /the star calls ALL elements, the letter refers to the event, we can rename this argument to anything at all, doesnt matter
+        console.log(e.target);                                      /this code sees the event done on the target (meaning the exact thing we just clicked) and returns the target element that was clicked                
+        console.log("The event type is " + e.type);                 /this will tell us the type of the even (if we click an element it will tell us that the event was "click")
+        console.log("x co-ordinate of the event is: " + e.pageX);   /this will tell us where in X axis we clicked (values in pixels)
+        console.log("y co-ordinate of the event is: " + e.pageY);   /this will tell us where in Y axis we clicked (values in pixels)
+        e.stopPropagation();                                        /stopPropagation will stop the event from bubbling up
+    });
+    
+/IMPORTANT/
+.stopPropagation is an important part of the code 
+Any element you are trying to target is going to be nested inside another element (its parent)
+The click event looks at the target element you just clicked AS WELL AS its parents (and so on up the tree)
+stopPropagation forces the event to look at the one target and stop
