@@ -339,7 +339,14 @@ function complete(){                            / The fourth parameter of an ani
 
 FADING ELEMENTS
 
-.fadeOut(/speed/);              / increases the opacity until the element is completely transparent. it takes 1 argument, how long it takes to run. When opacity is complete the element pretty much disappears (it rearranges the elements in the page)
-.fadeIn(/speed/);               / decreases the opacity until solid, it takes one parameter (the speed)
-.fadeTo(/speed, opacity/);      / takes two parameters, first is speed, second is popacity
+.fadeOut(/time/);              / increases the opacity until the element is completely transparent. it takes 1 argument, how long it takes to run. When opacity is complete the element pretty much disappears (it rearranges the elements in the page)
+.fadeIn(/time/);               / decreases the opacity until solid, it takes one parameter (the speed)
+.fadeTo(/time, opacity/);      / takes two parameters, first is speed, second is popacity
 
+// Part 21
+
+SHOW, HIDE, TOGGLE
+
+.hide(/time/);              / this method will animate the remove the element completely either quickly (no parameter), or with a speed
+.show(/time/);              / will animate the addition of the element
+.toggle(/time/);            / this method shows or hides depending on the event (TIP do not toggle the element the event is on or it will dissapear and you wont be able to click it back)
