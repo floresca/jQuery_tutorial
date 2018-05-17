@@ -362,4 +362,34 @@ SLIDE METHODS (UP/DOWN)
 .slideDown(/time, callback/);       / this method will animate and close the called element downwards
 .slideToggle(/time, callback/);     / Slides up OR down depending on whether it is already up or down. It also can have a call back
 
+// Part 23
 
+BUILDING A QUOTE ROTATOR
+
+
+
+$(document).ready(function(){                                   / the scrpt runs when document ready
+    
+    var allQuotes = $("blockquote");                            / allQuotes now equals all <blockquote> in an jQuery object
+    var currentQuote = 0;                                       / currentQuote is our counter (place holder)
+    
+    function changeQuote(){                                     / change quote function
+        
+        $(allQuotes[currentQuote]).fadeOut(200, function(){     / allquotes grabs from array, put in parenthesis so it stays as jquery, fadeOut current quote, THEN run function to insert new quote
+            
+             
+        if(currentQuote == allQuotes.length - 1){               / If current quote is 2 and allQuotes(which there are 3 of) - 1 is also 2 then:
+            currentQuote = 0;                                   / cycle back to currentQuote in position 0
+        } else {
+            currentQuote++;                                     / otherwise go to currentQuote++ (next quote)
+        }
+        
+        $(allQuotes[currentQuote]).fadeIn(200);                 / once currentQuote has updated, fade in
+        
+        });
+        
+    }
+    
+    var quoteTimer = setInterval(changeQuote, 3000);            / the above function will not trigger automaticall without something to fire it, the setInterval is a timer with 2 parameters, the thing we want the timer for, and how long that thing can happen for
+
+});

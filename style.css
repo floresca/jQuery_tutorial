@@ -369,3 +369,11 @@ section#points-of-sale ul{
     text-align: center;
     margin: 10px auto;
 }
+
+blockquote{
+    display: none;
+}
+
+blockquote:first-of-type{
+    display: block;
+}
