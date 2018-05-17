@@ -336,3 +336,10 @@ function complete(){                            / The fourth parameter of an ani
 }
 
 // Part 20
+
+FADING ELEMENTS
+
+.fadeOut(/speed/);              / increases the opacity until the element is completely transparent. it takes 1 argument, how long it takes to run. When opacity is complete the element pretty much disappears (it rearranges the elements in the page)
+.fadeIn(/speed/);               / decreases the opacity until solid, it takes one parameter (the speed)
+.fadeTo(/speed, opacity/);      / takes two parameters, first is speed, second is popacity
+
