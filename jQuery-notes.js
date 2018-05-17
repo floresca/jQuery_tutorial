@@ -393,3 +393,20 @@ $(document).ready(function(){                                   / the scrpt runs
     var quoteTimer = setInterval(changeQuote, 3000);            / the above function will not trigger automaticall without something to fire it, the setInterval is a timer with 2 parameters, the thing we want the timer for, and how long that thing can happen for
 
 });
+
+
+// Part 24
+
+CLICK TO EXPAND ANIMATION  
+
+$(document).ready(function(){                           / document ready to GO!
+    
+    var items = $("#points-of-sale li");                / items is now ALL of the <li> inside #points-of-sale
+    
+    items.on("click", function (){                      / when any <li> is clicked run function
+       
+       $(this).find("p").slideToggle(500);              / when THIS particular li is click find its <p> and slide toggle it visible or not
+        
+    });
+
+});
