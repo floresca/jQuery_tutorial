@@ -315,3 +315,24 @@ $("*").on("click", function(e){                                     /the star ca
 Any element you are trying to target is going to be nested inside another element (its parent)
 The click event looks at the target element you just clicked AS WELL AS its parents (and so on up the tree)
 stopPropagation forces the event to look at the one target and stop
+
+
+--------------------------------// Lessons 19, 20, and 21
+
+// Part 19
+
+ANIMATIONS IN JQUERY
+
+ $("section > h2").on("click", function(){      / call what we want to annimate and give it an event
+        
+        $(this).animate({                       / animate is a LOT like CSS, we can run the css properties as animate properties (animate does have a few of its own properties)
+            "width": "500px",                   / animate works with numerical values only
+            "height": "100px",                  
+            }, 400, "linear", complete);        / animate takes 4 arguments: first can be the object like css, second is length to animate in milliseconds, third is linear or swing, fourth is callback function
+        });                                     / animate is swing by default (starts slow, gets faster, ends slow), linear makes it the same speed (swing is more natural)
+        
+function complete(){                            / The fourth parameter of an animation is a call back function to run at the end of the animation. In this function we alert "Animation Complete" at the end of the animation
+    alert("Animation Complete");
+}
+
+// Part 20
