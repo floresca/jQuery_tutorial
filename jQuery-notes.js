@@ -350,3 +350,16 @@ SHOW, HIDE, TOGGLE
 .hide(/time/);              / this method will animate the remove the element completely either quickly (no parameter), or with a speed
 .show(/time/);              / will animate the addition of the element
 .toggle(/time/);            / this method shows or hides depending on the event (TIP do not toggle the element the event is on or it will dissapear and you wont be able to click it back)
+
+
+--------------------------------// Lessons 22, 23, and 24
+
+// Part 22
+
+SLIDE METHODS (UP/DOWN)
+
+.slideUp(/time, callback/);         / this method will animate and close the called element upwards, a second parameter can be added for a call back fundtion to run when complete
+.slideDown(/time, callback/);       / this method will animate and close the called element downwards
+.slideToggle(/time, callback/);     / Slides up OR down depending on whether it is already up or down. It also can have a call back
+
+
