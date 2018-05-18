@@ -410,3 +410,26 @@ $(document).ready(function(){                           / document ready to GO!
     });
 
 });
+
+
+
+--------------------------------// Lessons 25, 26
+
+// Part 25
+
+JQUERY PLUGGINS
+
+JQuery pluggings can be used to save a lot of space with coding and animating etc
+
+1 - find a plugging you want
+2 - download their java script file
+3 - in your HTML load the scrip UNDERNEATH jQuery loading script and ABOVE your own script (your script relies on the plugging which relies on the Jquery)
+        <script src="jQuery etc version goes here.js"></script>
+        <script src="new plugging goes here .js"></script>
+        <script src="my js goes here .js"></script>
+4 - add the necessary HTML to your page (many pluggin pages have instructions)     
+5 - style with the css if needed
+6 - run the given script in your own script page by calling the element and running a method from the plugging.JS file loaded
+
+
+        
