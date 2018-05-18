@@ -432,4 +432,31 @@ JQuery pluggings can be used to save a lot of space with coding and animating et
 6 - run the given script in your own script page by calling the element and running a method from the plugging.JS file loaded
 
 
-        
+// Part 26
+
+JQUERY TOOLS and suggestions
+
+JQuery UI:
+Make date pickers easy
+Draggable elementssortable elements
+sortable
+resizable
+etc
+
+Suggestions:
+Learn sliders
+tooltips
+expandable lists
+image galleries
+
+AJAX (Asynchronous JavaScript and XML)
+Communicate with a sever and load data into page without refresh
+example (Google map updates as you move, traffic updates)
+
+jQuery pluggins
+image sliders
+galleries
+and even the ability to make your own!
+
+
+---------------------END----------------------
